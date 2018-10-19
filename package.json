@@ -1,0 +1,23 @@
+{
+  "name": "weddell-lazy-image-component",
+  "version": "1.0.0",
+  "description": "Component that renders an image once it is in viewport.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@webgit.2kgames.com:2k-web/weddell-lazy-image-component.git"
+  },
+  "keywords": [
+    "weddell"
+  ],
+  "author": "Gryphon Myers",
+  "license": "MIT",
+  "dependencies": {
+    "defaults-es6": "^1.1.1",
+    "mixwith-es5": "^0.1.3",
+    "weddell-viewport-collision-component-mixin": "^1.0.5"
+  }
+}
