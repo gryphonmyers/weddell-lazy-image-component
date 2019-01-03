@@ -1,6 +1,6 @@
 {
   "name": "weddell-lazy-image-component",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Component that renders an image once it is in viewport.",
   "main": "index.js",
   "scripts": {
