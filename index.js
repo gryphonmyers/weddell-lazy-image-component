@@ -1,5 +1,5 @@
 const defaults = require('defaults-es6/deep');
-const {mix} = require('mixwith-es5');
+const {mix} = require('mixwith');
 const viewportCollisionMixin = require('weddell-viewport-collision-component-mixin');
 
 module.exports = Component => class extends mix(Component).with(viewportCollisionMixin) {

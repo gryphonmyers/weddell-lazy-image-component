@@ -17,7 +17,7 @@
   "license": "MIT",
   "dependencies": {
     "defaults-es6": "^1.1.1",
-    "mixwith-es5": "^0.1.3",
+    "mixwith": "^0.1.1",
     "weddell-viewport-collision-component-mixin": "^1.0.5"
   }
 }
