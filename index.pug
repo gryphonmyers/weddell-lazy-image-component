@@ -1,10 +1,19 @@
 if locals.currentSrc
-    if locals.hasLoaded
-        img.lazy-img(width=locals.width, height=locals.height, class={'has-loaded': locals.hasLoaded, 'was-in-viewport': locals.wasInViewport}, onload=$bind("this.markLoaded()"),
-            src=locals.currentSrc)&attributes($attributes)
+    if locals.errored
+        .lazy-img.errored.placeholder(id="lazy-img-" + locals.$id)
+    else if locals.hasLoaded
+        img.lazy-img(
+            width=locals.width, 
+            height=locals.height, 
+            class={'has-loaded': locals.hasLoaded, 'was-in-viewport': locals.wasInViewport}, 
+            onload=$bind("this.markLoaded()"), 
+            onerror=$bind("this.markErrored()"),
+            src=locals.currentSrc
+        )&attributes($attributes)
     else
         .lazy-img.placeholder.loading(id="lazy-img-" + locals.$id)
             img.lazy-img(width=locals.width, height=locals.height, class={'has-loaded': locals.hasLoaded, 'was-in-viewport': locals.wasInViewport}, onload=$bind("this.markLoaded()"),
+            onerror=$bind("this.markErrored()")
             src=locals.currentSrc)&attributes($attributes)
 else
     .lazy-img.placeholder(id="lazy-img-" + locals.$id)
