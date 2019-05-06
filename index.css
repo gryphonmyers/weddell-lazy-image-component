@@ -1,0 +1,28 @@
+img.lazy-img.has-loaded {
+    animation: lazy-img-fade-in;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.lazy-img.loading img {
+    max-height: 0;
+}
+
+img.lazy-img:not(.has-loaded) {
+    width: 0;
+    height: 0;
+}
+
+.lazy-img.placeholder::before {
+    content: '';
+    display: block;
+}
+
+@keyframes lazy-img-fade-in {
+    from {
+        opacity: 0;
+    }  
+    to {
+        opacity: 1;
+    }
+}
